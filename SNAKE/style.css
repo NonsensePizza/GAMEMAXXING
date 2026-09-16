@@ -24,10 +24,6 @@ canvas {
 
     border: 3px solid #4ade80;
 
-    /*
-        Prevent the phone from scrolling
-        while playing on the game board.
-    */
     touch-action: none;
 
     user-select: none;
@@ -53,12 +49,10 @@ button {
 
 
 /* ==========================
-   MOBILE HINT
+   MOBILE / SWIPE HINT
 ========================== */
 
 .mobile-hint {
-
-    display: none;
 
     color: #888;
 
@@ -68,12 +62,12 @@ button {
 
 
 /* ==========================
-   MOBILE CONTROLS
+   SNAKE CONTROLS
 ========================== */
 
 .mobile-controls {
 
-    display: none;
+    display: block;
 
     width: 220px;
 
@@ -99,9 +93,9 @@ button {
 
 .control-button {
 
-    width: 64px;
+    width: 68px;
 
-    height: 58px;
+    height: 60px;
 
     margin: 4px;
 
@@ -123,10 +117,6 @@ button {
         0 0 8px rgba(74, 222, 128, 0.35),
         inset 0 0 8px rgba(74, 222, 128, 0.08);
 
-    /*
-        Prevent the browser from interpreting
-        button presses as gestures.
-    */
     touch-action: manipulation;
 
     -webkit-tap-highlight-color: transparent;
@@ -138,11 +128,6 @@ button {
 
 }
 
-
-/*
-    Immediate visual feedback when
-    the player presses a button.
-*/
 
 .control-button:active {
 
@@ -160,10 +145,10 @@ button {
 
 
 /* ==========================
-   MOBILE
+   SMALL SCREENS
 ========================== */
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
 
     canvas {
 
@@ -177,31 +162,9 @@ button {
 
     }
 
-
-    .mobile-hint {
-
-        display: block;
-
-    }
-
-
     .mobile-controls {
 
-        display: block;
-
-    }
-
-
-    /*
-        Make the buttons easier to hit
-        on smaller phone screens.
-    */
-
-    .control-button {
-
-        width: 68px;
-
-        height: 60px;
+        width: 230px;
 
     }
 
